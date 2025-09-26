@@ -1,0 +1,10 @@
+[build]
+  command = "composer install && php artisan build" # adjust if needed
+  publish = "public"
+
+[context.production.environment]
+  PHP_VERSION = "8.2"
+  COMPOSER_VERSION = "2.7.6"
+  APP_ENV = "production"
+  APP_DEBUG = "false"
+  APP_URL = "https://your-production-domain.com"

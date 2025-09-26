@@ -1,6 +1,6 @@
 [build]
-  command = "composer install && php artisan build" # adjust if needed
-  publish = "public"
+     publish = "web/public"
+     command = "composer install --no-dev --optimize-autoloader"
 
 [context.production.environment]
   PHP_VERSION = "8.2"

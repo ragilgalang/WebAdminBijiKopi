@@ -1,0 +1,15 @@
+{
+  "functions": {
+    "api/index.php": {
+      "runtime": "vercel-php@0.6.1"
+    }
+  },
+  "routes": [
+    { "src": "/(favicon.ico|robots.txt)", "dest": "/public/$1", "check": true },
+    { "src": "/(css|js|images|img|build|vendor|storage)/(.*)", "dest": "/public/$1/$2", "check": true },
+    { "src": "/(.*\\.\w+)$", "dest": "/public/$1", "check": true },
+    { "src": "/(.*)", "dest": "/api/index.php" }
+  ]
+}
+
+
